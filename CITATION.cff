@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use these data or scripts, please cite the article below."
+title: "ElectroCore Analyzer: data and analysis scripts for the MethodsX method article"
+authors:
+  - family-names: Zarkasi
+    given-names: Ahmad
+  - family-names: Santoso
+    given-names: Didik R.
+  - family-names: Naba
+    given-names: Agus
+  - family-names: Masruroh
+license: MIT
+repository-code: "https://github.com/[USERNAME]/ElectroCore-MethodsX-data"
+preferred-citation:
+  type: article
+  title: "ElectroCore Analyzer: an integrated workflow for electrochemical impedance acquisition, validation and identifiability-aware equivalent-circuit fitting"
+  authors:
+    - family-names: Zarkasi
+      given-names: Ahmad
+    - family-names: Santoso
+      given-names: Didik R.
+    - family-names: Naba
+      given-names: Agus
+    - family-names: Masruroh
+  journal: "MethodsX"
+  year: 2026

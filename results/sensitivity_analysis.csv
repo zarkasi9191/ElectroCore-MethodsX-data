@@ -1,0 +1,23 @@
+dataset,configuration,rho_sev,rel_error_threshold_pct,window_factor,promotion_margin,selected_model,true_topology,rank_of_true_topology
+A,baseline,0.98,150,5,10,M8,M7,2
+A,ρsev 0.95,0.95,150,5,10,M8,M7,2
+A,ρsev 0.99,0.99,150,5,10,M8,M7,2
+A,rel. error 100 %,0.98,100,5,10,M8,M7,2
+A,rel. error 200 %,0.98,200,5,10,M8,M7,2
+A,window ×3,0.98,150,3,10,M8,M7,2
+A,window ×10,0.98,150,10,10,M8,M7,2
+A,margin 5,0.98,150,5,5,M2,M7,3
+A,margin 15,0.98,150,5,15,M8,M7,2
+A,all lenient,0.99,200,3,5,M2,M7,3
+A,all strict,0.95,100,10,15,M8,M7,2
+B,baseline,0.98,150,5,10,M13,M13,1
+B,ρsev 0.95,0.95,150,5,10,M13,M13,1
+B,ρsev 0.99,0.99,150,5,10,M13,M13,1
+B,rel. error 100 %,0.98,100,5,10,M13,M13,1
+B,rel. error 200 %,0.98,200,5,10,M13,M13,1
+B,window ×3,0.98,150,3,10,M13,M13,1
+B,window ×10,0.98,150,10,10,M13,M13,1
+B,margin 5,0.98,150,5,5,M13,M13,1
+B,margin 15,0.98,150,5,15,M13,M13,1
+B,all lenient,0.99,200,3,5,M13,M13,1
+B,all strict,0.95,100,10,15,M13,M13,1
