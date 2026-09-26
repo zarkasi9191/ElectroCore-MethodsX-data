@@ -1,5 +1,7 @@
 # ElectroCore Analyzer — data and analysis scripts (MethodsX)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22936544.svg)](https://doi.org/10.5281/zenodo.22936544)
+
 This repository contains every measured data set used in the MethodsX method article
 
 > A. Zarkasi, D.R. Santoso, A. Naba, Masruroh, *ElectroCore Analyzer: an integrated workflow for
@@ -45,7 +47,7 @@ pip install -r requirements.txt
 python scripts/reproduce_all.py
 ```
 
-`reproduce_numbers.py` prints one line per quantity (48 in total) and writes
+`reproduce_numbers.py` prints one line per quantity (49 in total) and writes
 `results/reproduced_numbers.csv`; all of them reproduce the values printed in the article.
 
 ## Data description
@@ -62,12 +64,11 @@ exports (`PLN_*_mM.xlsx`, sheet `EIS_Data`) the column `Z_Imag` is −Z″ (posi
 | Dataset B (MV Secs. 1–4; Tables 9–10; Figs. 6d–f, 7) | `dataset_B/Hasil_Fitting_2_Puncak.xlsx`, `model_comparison_2_puncak.xlsx` | as above |
 | Ferri/ferrocyanide (MV Sec. 6; Fig. 8) | `ferri_ferrocyanide/PLN_{10,15,20}_mM.xlsx` | raw spectra and measurement settings |
 
-**Dataset A** — discrete-component network Rs–(R1 ∥ C1), nominal Rs = R1 = 1 kΩ (colour code; the
-capacitor value was not recorded), 10 Hz – 100 kHz. Three contiguous points between 47.1 and 68.7 kHz
+**Dataset A** — discrete-component network Rs–(R1 ∥ C1), measured component values Rs = 979 Ω, R1 = 991 Ω, C1 = 32.2 nF, 10 Hz – 100 kHz. Three contiguous points between 47.1 and 68.7 kHz
 were masked at inspection; the export contains the 47 retained points.
 
-**Dataset B** — Rs–(R1 ∥ C1)–(R2 ∥ C2), nominal Rs = R1 = R2 = 1 kΩ, C1 = 470 nF, C2 = 33 nF,
-50 points, 10 Hz – 100 kHz. In the export the 470 nF arc is named `Rct`/`Cdl` and the 33 nF arc
+**Dataset B** — Rs–(R1 ∥ C1)–(R2 ∥ C2), measured component values Rs = 997 Ω, R1 = 991 Ω, R2 = 998 Ω, C1 = 466 nF, C2 = 32.2 nF,
+50 points, 10 Hz – 100 kHz. In the export the 466 nF arc is named `Rct`/`Cdl` and the 32.2 nF arc
 `R2`/`C2` (capacitances in pF); the article calls them R1/C1 and R2/C2.
 
 **Ferri/ferrocyanide** — equimolar K3[Fe(CN)6]/K4[Fe(CN)6] at 10, 15 and 20 mM, prepared by mixing
@@ -82,7 +83,7 @@ Python 3.9.13 host software (ElectroCore Analyzer v2.1).
 
 * **Recomputed independently** (`reproduce_numbers.py`): all Kramers–Kronig statistics, including the
   M dependence, the windowed and |Z|⁻¹-weighted checks and the sign-free L case; AIC, AICc, BIC,
-  ΔAIC, ΔBIC, the t- and F-tests; the Brug capacitance; the parameter deviations from nominal values;
+  ΔAIC, ΔBIC, the t- and F-tests; the Brug capacitance; the parameter deviations from the measured component values;
   the Durbin–Watson, kurtosis, Shapiro–Wilk and Q–Q statistics. `ecore_kk.py` reproduces the software's
   exported χ²_KK of dataset B (7.29 × 10⁻⁵) to three digits.
 * **Taken from the software**: the automatic rankings and identifiability penalties (read from the
@@ -96,5 +97,7 @@ Scripts: MIT (see `LICENSE`). Data and results: CC BY 4.0.
 
 ## Citation
 
-Please cite the article (see `CITATION.cff`). A citable archive of this repository with a DOI can be
-created by connecting it to Zenodo and publishing a release.
+Please cite the article (see `CITATION.cff`) and, for the data, the archived release:
+
+> A. Zarkasi, D.R. Santoso, A. Naba, Masruroh, ElectroCore Analyzer: data and analysis scripts for the
+> MethodsX method article, version 1.0.0, Zenodo (2026), https://doi.org/10.5281/zenodo.22936544
