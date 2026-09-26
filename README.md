@@ -1,6 +1,6 @@
 # ElectroCore Analyzer — data and analysis scripts (MethodsX)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22936544.svg)](https://doi.org/10.5281/zenodo.22936544)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22973936.svg)](https://doi.org/10.5281/zenodo.22973936)
 
 This repository contains every measured data set used in the MethodsX method article
 
@@ -100,4 +100,4 @@ Scripts: MIT (see `LICENSE`). Data and results: CC BY 4.0.
 Please cite the article (see `CITATION.cff`) and, for the data, the archived release:
 
 > A. Zarkasi, D.R. Santoso, A. Naba, Masruroh, ElectroCore Analyzer: data and analysis scripts for the
-> MethodsX method article, version 1.0.0, Zenodo (2026), https://doi.org/10.5281/zenodo.22936544
+> MethodsX method article, version 1.0.1, Zenodo (2026), https://doi.org/10.5281/zenodo.22973936

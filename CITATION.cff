@@ -10,7 +10,9 @@ authors:
     given-names: Agus
   - family-names: Masruroh
 license: MIT
-repository-code: "https://github.com/[USERNAME]/ElectroCore-MethodsX-data"
+doi: "10.5281/zenodo.22973936"
+version: "1.0.1"
+repository-code: "https://github.com/zarkasi9191/ElectroCore-MethodsX-data"
 preferred-citation:
   type: article
   title: "ElectroCore Analyzer: an integrated workflow for electrochemical impedance acquisition, validation and identifiability-aware equivalent-circuit fitting"
