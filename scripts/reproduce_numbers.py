@@ -68,19 +68,20 @@ Rs, Rct, Q = pA["Rs"][1], pA["Rct"][1], pA["CPE_Q"][1]
 Rp = Rs * Rct / (Rs + Rct); Ceff = Q ** (1 / n) * Rp ** ((1 - n) / n)
 check("C_eff (Brug), Eq. (13), pF", 31715, Ceff * 1e12, 1e-3, "Table 7; MV 7")
 check("R_p (ohm)", 494.7, Rp, 1e-3, "Sec. 10.1")
-check("R_s deviation from 1 kOhm (%)", -2.3, 100 * (Rs / 1000 - 1), 0.02, "Sec. 10.1")
-check("R_1 deviation from 1 kOhm (%)", 0.2, 100 * (Rct / 1000 - 1), 0.1, "Sec. 10.1")
+check("M8 R_s deviation from measured 979 Ohm (%)", -0.2, 100 * (Rs / 979 - 1), 0.2, "Sec. 10.1")
+check("M8 R_1 deviation from measured 991 Ohm (%)", 1.1, 100 * (Rct / 991 - 1), 0.05, "Sec. 10.1")
+check("C_eff deviation from measured 32.2 nF (%)", -1.5, 100 * (Ceff * 1e9 / 32.2 - 1), 0.05, "Sec. 10.1")
 
 # ---------- dataset B parameter recovery (Table 9)
 pB = {r[0]: r for r in table("B", "Fitting_Parameters")[1]}
 mB = sheet_dict("B", "Advanced_Metrics")
 check("AIC M13 (dataset B)", -1021.41, mB["AIC"], 1e-5, "Table 10")
-# export names: Rct/Cdl form the 470 nF arc (R1, C1 of Table 9), R2/C2 the 33 nF arc; capacitances exported in pF
-for lab, key, nom, scale in [("R_s", "Rs", 1000, 1), ("R_1", "Rct", 1000, 1), ("C_1 (nF)", "Cdl", 470, 1e-3),
-                             ("R_2", "R2", 1000, 1), ("C_2 (nF)", "C2", 33, 1e-3)]:
+# export names: Rct/Cdl form the 466 nF arc (R1, C1 of Table 9), R2/C2 the 32.2 nF arc; capacitances exported in pF.
+# Reference values are the measured component values.
+for lab, key, ref, scale, art_dev in [("R_s", "Rs", 997, 1, 0.13), ("R_1", "Rct", 991, 1, -0.83), ("C_1 (nF)", "Cdl", 466, 1e-3, 2.88),
+                                      ("R_2", "R2", 998, 1, -2.17), ("C_2 (nF)", "C2", 32.2, 1e-3, 4.23)]:
     v = pB[key][1] * scale
-    art_dev = {"R_s": -0.17, "R_1": -1.72, "C_1 (nF)": 2.00, "R_2": -2.36, "C_2 (nF)": 1.70}[lab]
-    check(f"dataset B {lab}: deviation from nominal (%)", art_dev, 100 * (v / nom - 1), 0.02, "Table 9")
+    check(f"dataset B {lab}: deviation from measured value (%)", art_dev, 100 * (v / ref - 1), 0.02, "Table 9")
 
 # ---------- residual diagnostics (MV 3), recomputed from the exported fit
 dw = lambda e: float(np.sum(np.diff(e) ** 2) / np.sum(e ** 2))
