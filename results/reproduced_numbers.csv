@@ -33,14 +33,15 @@ t statistic on n,Sec. 10.2,4.47,4.466099332046714,PASS
 F-test p,Sec. 10.2,3.6e-05,3.5679448650932684e-05,PASS
 "C_eff (Brug), Eq. (13), pF",Table 7; MV 7,31715,31715.241634816455,PASS
 R_p (ohm),Sec. 10.1,494.7,494.6457521457621,PASS
-R_s deviation from 1 kOhm (%),Sec. 10.1,-2.3,-2.3234736094358777,PASS
-R_1 deviation from 1 kOhm (%),Sec. 10.1,0.2,0.2143196550600024,PASS
+M8 R_s deviation from measured 979 Ohm (%),Sec. 10.1,-0.2,-0.22826722107852637,PASS
+M8 R_1 deviation from measured 991 Ohm (%),Sec. 10.1,1.1,1.1244396115640765,PASS
+C_eff deviation from measured 32.2 nF (%),Sec. 10.1,-1.5,-1.505460761439581,PASS
 AIC M13 (dataset B),Table 10,-1021.41,-1021.408911770919,PASS
-dataset B R_s: deviation from nominal (%),Table 9,-0.17,-0.17215455449434147,PASS
-dataset B R_1: deviation from nominal (%),Table 9,-1.72,-1.717924499824297,PASS
-dataset B C_1 (nF): deviation from nominal (%),Table 9,2.0,2.0020259708756205,PASS
-dataset B R_2: deviation from nominal (%),Table 9,-2.36,-2.362017556567231,PASS
-dataset B C_2 (nF): deviation from nominal (%),Table 9,1.7,1.7035358686750213,PASS
+dataset B R_s: deviation from measured value (%),Table 9,0.13,0.1282301359134097,PASS
+dataset B R_1: deviation from measured value (%),Table 9,-0.83,-0.8253526738893013,PASS
+dataset B C_1 (nF): deviation from measured value (%),Table 9,2.88,2.877579841870248,PASS
+dataset B R_2: deviation from measured value (%),Table 9,-2.17,-2.1663502570813953,PASS
+dataset B C_2 (nF): deviation from measured value (%),Table 9,4.23,4.230331790878106,PASS
 "Durbin-Watson, lowest component",MV 3,0.09,0.09433691930925209,PASS
 "Durbin-Watson, highest component",MV 3,0.17,0.1682575277814149,PASS
 "excess kurtosis, lowest",MV 3,3.4,3.4064475596481545,PASS
